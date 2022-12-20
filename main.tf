@@ -1,4 +1,14 @@
 
+provider "aws" {
+  region = var.cluster_aws_region
+}
+
+provider "helm" {
+  kubernetes {
+    config_path = var.kubeconfig_path
+  }
+}
+
 resource "helm_release" "factory" {
   name              = "factory"
   repository        = var.factory_chart_repo
