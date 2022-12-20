@@ -3,7 +3,7 @@ resource "helm_release" "factory" {
   name              = "factory"
   repository        = var.factory_chart_repo
   chart             = "factory"
-  version           = var.factroy_chart_version
+  version           = var.factory_chart_version
 
   set {
     name  = "bigbang.enabled"
