@@ -3,7 +3,7 @@ resource "helm_release" "factory" {
   name              = "factory"
   repository        = "https://pages.github.boozallencsn.com/Solutions-Center/charts"
   chart             = "factory"
-  version           = "0.2.0"
+  version           = "0.2.3"
 
   set {
     name  = "bigbang.enabled"

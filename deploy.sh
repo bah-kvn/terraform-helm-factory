@@ -1,7 +1,7 @@
 #!/bin/bash
 [ -d ".terraform" ] || terraform init # only require to run once.
 export log=/tmp/tf-deploy.log
-export CLUSTER_NAME="demo"
+export CLUSTER_NAME="demo-rmc"
 export TF_LOG=DEBUG
 export TF_LOG_PATH=$log
 export TF_VAR_bigbang_branch="main"
@@ -26,9 +26,9 @@ export TF_VAR_rancher_cloud_secret_access_key="$RANCHER_CLOUD_SECRET_ACCESS_KEY"
 export TF_VAR_rancher_enabled=true
 export TF_VAR_rancher_password="$DEFAULT_PASSWORD"
 export TF_VAR_rancher_url="rancher.$TF_VAR_cluster_name.$TF_VAR_domain"
-export TF_VAR_registryCredentials_email="$EMAIL"
-export TF_VAR_registryCredentials_password="$REGISTRY1_PASSWORD"
-export TF_VAR_registryCredentials_username="$REGISTRY1_USERNAME"
+export TF_VAR_registryCredentials_email=""
+export TF_VAR_registryCredentials_password="$REGISTRY1_SA_PASSWORD"
+export TF_VAR_registryCredentials_username="$REGISTRY1_SA_USERNAME"
 
-terraform plan && terraform apply -auto-approve | tee $log && \
+terraform plan && terraform apply -auto-approve 
 

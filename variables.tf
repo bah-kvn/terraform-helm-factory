@@ -4,6 +4,11 @@ variable "bigbang_enabled" {
   default = true
 }
 
+variable "factory_chart_repo" {
+  type    = string
+  default = ""
+}
+
 variable "certManager_enabled" {
   type    = bool
   default = true
