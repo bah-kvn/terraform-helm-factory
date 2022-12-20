@@ -1,7 +1,12 @@
 
 variable "bigbang_enabled" {
   type    = bool
-  default = true
+  default = false
+}
+
+variable "factory_chart_version" {
+  type    = string
+  default = "0.2.3"
 }
 
 variable "factory_chart_repo" {
@@ -11,27 +16,27 @@ variable "factory_chart_repo" {
 
 variable "certManager_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "externalDns_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "longhorn_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "rancher_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "flux_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "cluster_aws_region" {
@@ -66,7 +71,7 @@ variable "letsEncrypt_issuer" {
 
 variable "rancher_chart_version" {
   type    = string
-  default = "2.6.8"
+  default = "2.7.0"
 }
 
 variable "rancher_password" {
@@ -86,6 +91,7 @@ variable "rancher_cloud_secret_access_key" {
 
 variable "rancher_url" {
   type = string
+  default = ""
 }
 
 variable "bigbang_branch" {
@@ -100,7 +106,7 @@ variable "git_password" {
 
 variable "bigbang_path" {
   type    = string
-  default = "main"
+  default = "base"
 }
 
 variable "bigbang_repo" {
@@ -113,12 +119,12 @@ variable "git_username" {
   default = ""
 }
 
-variable "registryCredentials_password" {
+variable "registry_password" {
   type    = string
   default = ""
 }
 
-variable "registryCredentials_username" {
+variable "registry_username" {
   type    = string
   default = ""
 }
