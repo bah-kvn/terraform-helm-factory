@@ -129,7 +129,7 @@ variable "registry_username" {
   default = ""
 }
 
-variable "registryCredentials_email" {
+variable "registry_email" {
   type    = string
   default = ""
 }

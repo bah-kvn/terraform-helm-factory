@@ -112,18 +112,18 @@ resource "helm_release" "factory" {
   }
   
   set {
-    name  = "registryCredentials.username"
-    value = var.registryCredentials_username
+    name  = "registry.username"
+    value = var.registry_username
   }
   
   set {
-    name  = "registryCredentials.password"
-    value = var.registryCredentials_password
+    name  = "registry.password"
+    value = var.registry_password
   }
   
   set {
-    name  = "registryCredentials.email"
-    value = var.registryCredentials_email
+    name  = "registry.email"
+    value = var.registry_email
   }
 
 }
