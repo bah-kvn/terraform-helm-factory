@@ -6,7 +6,7 @@ variable "bigbang_enabled" {
 
 variable "factory_chart_version" {
   type    = string
-  default = "0.2.3"
+  default = "0.2.4"
 }
 
 variable "factory_chart_repo" {
