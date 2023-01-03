@@ -79,12 +79,12 @@ variable "rancher_password" {
   default = "b00zA113n"
 }
 
-variable "rancher_cloud_access_key_id" {
+variable "rancher_cloud_id" {
   type    = string
   default = ""
 }
 
-variable "rancher_cloud_secret_access_key" {
+variable "rancher_cloud_secret" {
   type    = string
   default = ""
 }
