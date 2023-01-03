@@ -113,12 +113,12 @@ resource "helm_release" "factory" {
   
   set {
     name  = "rancher.cloud.rancher_aws_access_key_id"
-    value = var.rancher_cloud_access_key_id
+    value = var.rancher_cloud_id
   }
   
   set {
     name  = "rancher.cloud.rancher_aws_secret_access_key"
-    value = var.rancher_cloud_secret_access_key
+    value = var.rancher_cloud_secret
   }
   
   set {
